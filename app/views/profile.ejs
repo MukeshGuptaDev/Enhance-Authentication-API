@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Actions</th>
+                <th scope="col">Profile Pic</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Bio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="/user/edit/<%= user._id%>"><i class="fa-regular fa-pen-to-square" style="color: #FFD43B;"></i></a>
+                </td>
+                <td><img src="<%= user.profilePicURL || '' %>" alt="profile pic"></td>
+                <td><%= user.name || "" %></td>
+                <td><%= user.email || "" %></td>
+                <td><%= user.phone || "" %></td>
+                <td><%= user.bio || "" %></td>
+            
+            </tr>
+        </tbody>
+    </table>
+    <p class="mt-5">Show all users</p>
+    <a href="/user"><button type="submit" class="btn btn-primary col-3">Homepage</button></a>
+</div>
+<%- include('partials/footer') %>
